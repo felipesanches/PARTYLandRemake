@@ -6,5 +6,5 @@ PARTY Land Remake - Building a real-life playfield replica of the PARTY Land pin
 Dependencies
 ============
 
- sudo pip install solidpinball
- sudo apt-get install openscad
+ sudo pip install solidpinball  
+ sudo apt-get install openscad  
