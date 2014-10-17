@@ -1,3 +1,9 @@
+# This code describes the PARTYLand pinball table based on the design depicted
+# in the classic Amiga game Pinball Fantasies
+# There's a more complete model at https://code.google.com/p/how-to-build-a-pinball/
+# But I'm refactoring it and re-modelling it here using the SolidPinball framework
+# See https://github.com/felipesanches/SolidPinball/ for more info.
+
 from solid.utils import *
 from pinball.playfield import Playfield
 from pinball.parts.ballhole import BallHole
