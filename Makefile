@@ -1,6 +1,8 @@
 STL_FILES = \
 	outputs/STL/partyland_playfield_wood.stl
 
+preview: outputs/SCAD/partyland_assembly.scad
+
 all: $(STL_FILES)
 
 %.scad: CAD/PARTYLandRemake.py
