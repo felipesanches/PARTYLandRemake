@@ -25,7 +25,7 @@ or to SolidPinball. I'll review any pul requests as soon as possible.
 Licensing
 ---------
 
-Although the original design of the PARTY Land pinball table do not belong to me, the 3d models,
+Although the original design of the PARTY Land pinball table does not belong to me, the 3d models,
 SVG/DXF vectors and SCAD scripts here are authored by me (Felipe Sanches <juca@members.fsf.org>) and
 I publish these files under the GNU GPLv3 or later so that other DIY pinball enthusiasts can
 build upon my work and hopefully we can have more people building their own homebrew pinball machines. :-)
