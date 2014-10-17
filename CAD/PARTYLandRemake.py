@@ -10,27 +10,76 @@ from pinball.parts.standuptarget import RoundStandupTarget, NarrowStandupTarget,
 
 pf_width = 600
 pf_height = 1200
+playfield_variant="msdos"
+
+class VerticalUpKicker(BallHole):
+	#TODO: Implement this in SolidPinball
+	pass
+
+class BallDrain(BallHole):
+	#TODO: Implement this in SolidPinball
+	pass
+
+#TODO: SolidPinball: implement the PopBumper body 3d-model
+#TODO: SolidPinball: implement the Slingshot assembly 3d-model (including rubber and 3 posts automatically)
+#TODO: SolidPinball: implement the 3d-model of the StardupTargets metal part
 
 pf = Playfield(pf_width, pf_height)
 pf.append_parts([
-  {'part': BallHole(), 'position': [pf_width/2,60] }, #ball drain
-  {'part': BallHole(), 'position': [510, 720] },
-  {'part': BallHole(), 'position': [200, 630] },
-  {'part': BallHole(), 'position': [120, 670] },
-  {'part': Flipper(angle=-42, rubber_color="orangered"), 'position': [pf_width/2 - 100, 200] },
-  {'part': Flipper(angle=180+42, rubber_color="orangered"), 'position': [pf_width/2 + 100, 200] },
-  {'part': Slingshot(angle=-70), 'position': [pf_width/2 - 130, 330] },
-  {'part': Slingshot(angle=+70), 'position': [pf_width/2 + 130, 330] },
-  {'part': PopBumper(cap_color="darkred"), 'position': [330, 630] },
-  {'part': PopBumper(cap_color="darkblue"), 'position': [380, 690] },
-  {'part': PopBumper(cap_color="darkgreen"), 'position': [410, 580] },
-  {'part': LaneGuideAssembly(), 'position': [210, 920] },
-  {'part': LaneGuideAssembly(), 'position': [260, 900] },
-  {'part': LaneGuideAssembly(), 'position': [310, 920] },
-  {'part': RoundStandupTarget(), 'position': [40, 820], 'rotation': 30 },
-  {'part': NarrowStandupTarget(), 'position': [80, 840] },
-  {'part': WideStandupTarget(), 'position': [120, 820], 'rotation': -30 },
-  {'part': Post(), 'position': [360, 500] }
+  {'part': BallDrain(), 'position': [303,53.5] }, # ball drain
+  {'part': BallHole(), 'position': [340.2,1116.3] }, # hidden entrance
+  {'part': BallHole(), 'position': [135,942] }, # million loop
+  {'part': BallHole(), 'position': [266,873.5] }, # arcade
+  {'part': VerticalUpKicker(), 'position': [39.5,703.5] }, # snack
+  {'part': Flipper(angle=-65, rubber_color="red"), 'position': [62.5, 746.5] }, #top left
+  {'part': Flipper(angle=-35, rubber_color="red"), 'position':   [197.5, 181.5] }, #bottom left
+  {'part': Flipper(angle=180+35, rubber_color="red"), 'position': [402, 181.5] }, #bottom right
+  {'part': Slingshot(angle=-71.5), 'position': [300 - 172, 351] }, # left
+  {'part': Slingshot(angle=71.5), 'position': [300 + 172, 351] }, # right
+  {'part': PopBumper(cap_color="orangered", game="partyland", version=playfield_variant), 'position': [543.0, 670.0] },
+  {'part': PopBumper(cap_color="royalblue", game="partyland", version=playfield_variant), 'position': [388.8, 631.7] },
+  {'part': PopBumper(cap_color="lightseagreen", game="partyland", version=playfield_variant), 'position': [437.3, 690.0] },
+# These could also be a 3 drop-target bank
+  {'part': RoundStandupTarget(), 'position': [311-33*cos(-71.5*3.1415/180), 626-33*sin(-71.5*3.1415/180)], 'rotation':-71.5  }, # H
+  {'part': RoundStandupTarget(), 'position': [311, 626], 'rotation':-71.5  }, # I
+  {'part': RoundStandupTarget(), 'position': [311+33*cos(-71.5*3.1415/180), 626+33*sin(-71.5*3.1415/180)], 'rotation':-71.5  }, # T
+  {'part': WideStandupTarget(), 'position': [278, 807], 'rotation':-20 }, # arcade
+])
+
+#TODO: SolidPinball: Implement BallLauncher()
+#TODO: SolidPinball: Implement RollOverSwitch()
+#TODO: SolidPinball: Implement RollUnderSwitch()
+#TODO: SolidPinball: Implement RollUnderGate()
+#TODO: SolidPinball: Implement Light()
+#TODO: SolidPinball: Implement Ramp()
+#TODO: SolidPinball: Implement WireBridge()
+
+posts_coords = [
+  [617.305 ,342.080],
+  [410.4616, 200.030],
+  [215.2479, 60.473],
+  [1501.7811, 342.080],
+  [1708.6245, 200.030],
+  [1903.8382, 60.474]
+];
+
+#TODO: fix the list of Post() coordinates
+#for coords in posts_coords:
+#	pf.append(Post(), position=coords)
+
+
+#TODO: SolidPinball: make it possible to attach a mini-playfield to a main one
+# (perhaps the Playfield class could also inherit from the Part class?)
+# (Or should we implement a MiniPlayfield class?)
+
+#TODO: SolidPinball: make it possible to construct a Playfield by passing a vector
+# curve that defines it's layout shape
+
+upper_pf = Playfield(pf_width, pf_height)
+upper_pf.append_parts([
+  {'part': LaneGuideAssembly(), 'position': [310, 1076] },
+  {'part': LaneGuideAssembly(), 'position': [366, 1066] },
+  {'part': LaneGuideAssembly(), 'position': [422, 1076] },
 ])
 
 #This exports the design to a .scad file that you can render with OpenSCAD
