@@ -6,6 +6,7 @@
 
 from solid.utils import *
 from pinball.playfield import Playfield
+from pinball.parts.launcher import Launcher
 from pinball.parts.inserts import Inserts
 from pinball.parts.ballhole import BallHole
 from pinball.parts.flipper import Flipper 
@@ -34,6 +35,7 @@ class BallDrain(BallHole):
 pf = Playfield(pf_width, pf_height)
 pf.append_parts([
   {'part': Inserts('../../CAD/DXF/playfield_inserts.dxf') , 'position': [0,0]}, #TODO: SolidPinball: default [0,0] value for the 'position' keyword
+  {'part': Launcher(), 'position': [pf_width - 30, 100] }, # ball launcher
   {'part': BallDrain(), 'position': [303,53.5] }, # ball drain
   {'part': BallHole(), 'position': [340.2,1116.3] }, # hidden entrance
   {'part': BallHole(), 'position': [135,942] }, # million loop
