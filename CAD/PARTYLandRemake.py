@@ -7,6 +7,7 @@
 from solid.utils import *
 from pinball.playfield import Playfield
 from pinball.parts.launcher import Launcher
+from pinball.parts.rollover import Rollover
 from pinball.parts.inserts import Inserts
 from pinball.parts.ballhole import BallHole
 from pinball.parts.flipper import Flipper 
@@ -34,6 +35,12 @@ class BallDrain(BallHole):
 
 pf = Playfield(pf_width, pf_height)
 pf.append_parts([
+  {'part': Rollover(), 'position': [74.5,360] },
+  {'part': Rollover(), 'position': [37.4,320] },
+  {'part': Rollover(), 'position': [520.4, 360] },
+  {'part': Rollover(), 'position': [560.5, 320] },
+  {'part': Rollover(), 'position': [457,1129.5], 'rotation':-120 },
+  {'part': Rollover(), 'position': [269,1147.3], 'rotation':105 },
   {'part': Inserts('../../CAD/DXF/playfield_inserts.dxf') , 'position': [0,0]}, #TODO: SolidPinball: default [0,0] value for the 'position' keyword
   {'part': Launcher(), 'position': [pf_width - 30, 100] }, # ball launcher
   {'part': BallDrain(), 'position': [303,53.5] }, # ball drain
@@ -56,8 +63,6 @@ pf.append_parts([
   {'part': WideStandupTarget(), 'position': [278, 807], 'rotation':-20 }, # arcade
 ])
 
-#TODO: SolidPinball: Implement BallLauncher()
-#TODO: SolidPinball: Implement RollOverSwitch()
 #TODO: SolidPinball: Implement RollUnderSwitch()
 #TODO: SolidPinball: Implement RollUnderGate()
 #TODO: SolidPinball: Implement Light()
@@ -77,7 +82,6 @@ posts_coords = [
 #for coords in posts_coords:
 #	pf.append(Post(), position=coords)
 
-
 #TODO: SolidPinball: make it possible to attach a mini-playfield to a main one
 # (perhaps the Playfield class could also inherit from the Part class?)
 # (Or should we implement a MiniPlayfield class?)
@@ -90,6 +94,10 @@ upper_pf.append_parts([
   {'part': LaneGuideAssembly(), 'position': [310, 1076] },
   {'part': LaneGuideAssembly(), 'position': [366, 1066] },
   {'part': LaneGuideAssembly(), 'position': [422, 1076] },
+  {'part': Rollover(), 'position': [280,1060] },
+  {'part': Rollover(), 'position': [338,1050] },
+  {'part': Rollover(), 'position': [394,1050] },
+  {'part': Rollover(), 'position': [451,1060] }
 ])
 
 #This exports the design to a .scad file that you can render with OpenSCAD
