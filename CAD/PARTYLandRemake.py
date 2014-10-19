@@ -17,8 +17,8 @@ from pinball.parts.laneguide import LaneGuideAssembly
 from pinball.parts.post import Post
 from pinball.parts.standuptarget import RoundStandupTarget, NarrowStandupTarget, WideStandupTarget
 
-pf_width = 600
-pf_height = 1200
+pf_width = 636.5
+pf_height = 1185.8
 playfield_variant="msdos"
 
 class VerticalUpKicker(BallHole):
