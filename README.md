@@ -3,6 +3,8 @@ PARTYLandRemake
 
 PARTY Land Remake - Building a real-life playfield replica of the PARTY Land pinball table from the Amiga game Pinball Fantasies
 
+![A preview of the playfield design implemented using the SolidPinball python library](https://raw.github.com/felipesanches/PinballFantasiesRemake/master/PARTYLandRemake_preview.png)
+
 Dependencies
 ------------
 
