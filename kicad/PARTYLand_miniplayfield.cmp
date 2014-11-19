@@ -1,0 +1,129 @@
+Cmp-Mod V01 Created by Cvpcb (2014-jul-16 BZR unknown)-product   date = Qua 19 Nov 2014 17:57:59 BRST
+
+BeginCmp
+TimeStamp = /546CD76B;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = LEDs:LED-3MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /546CD744;
+Reference = D2;
+ValeurCmp = LED;
+IdModule  = LEDs:LED-3MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /546CD71E;
+Reference = D3;
+ValeurCmp = LED;
+IdModule  = LEDs:LED-3MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /546CD5DF;
+Reference = D4;
+ValeurCmp = LED;
+IdModule  = LEDs:LED-3MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /546CD627;
+Reference = D5;
+ValeurCmp = LED;
+IdModule  = LEDs:LED-3MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /546CD649;
+Reference = D6;
+ValeurCmp = LED;
+IdModule  = LEDs:LED-3MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /546CD797;
+Reference = D7;
+ValeurCmp = LED;
+IdModule  = LEDs:LED-3MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /546CD7DF;
+Reference = D8;
+ValeurCmp = LED;
+IdModule  = LEDs:LED-3MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /546CD3C9;
+Reference = P1;
+ValeurCmp = CONN_6;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x06;
+EndCmp
+
+BeginCmp
+TimeStamp = /546CDC7A;
+Reference = R1;
+ValeurCmp = R;
+IdModule  = Discret:R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /546CDCBC;
+Reference = R2;
+ValeurCmp = R;
+IdModule  = Discret:R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /546CDCEE;
+Reference = R3;
+ValeurCmp = R;
+IdModule  = Discret:R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /546CDD23;
+Reference = R4;
+ValeurCmp = R;
+IdModule  = Discret:R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /546CDD51;
+Reference = R5;
+ValeurCmp = R;
+IdModule  = Discret:R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /546CDD86;
+Reference = R6;
+ValeurCmp = R;
+IdModule  = Discret:R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /546CDDB6;
+Reference = R7;
+ValeurCmp = R;
+IdModule  = Discret:R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /546CDE5E;
+Reference = R8;
+ValeurCmp = R;
+IdModule  = Discret:R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /5468A1DA;
+Reference = U1;
+ValeurCmp = 74HC595;
+IdModule  = Sockets_DIP:DIP-16__300_ELL;
+EndCmp
+
+EndListe
