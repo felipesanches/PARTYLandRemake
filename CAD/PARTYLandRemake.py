@@ -41,7 +41,7 @@ pf.append_parts([
   {'part': Rollover(), 'position': [560.5, 320] },
   {'part': Rollover(), 'position': [457,1129.5], 'rotation':-120 },
   {'part': Rollover(), 'position': [269,1147.3], 'rotation':105 },
-  {'part': Inserts('../../CAD/DXF/playfield_inserts.dxf') , 'position': [0,0]}, #TODO: SolidPinball: default [0,0] value for the 'position' keyword
+  {'part': Inserts('../../DXF/playfield_inserts.dxf') , 'position': [0,0]}, #TODO: SolidPinball: default [0,0] value for the 'position' keyword
   {'part': Launcher(), 'position': [pf_width - 30, 100] }, # ball launcher
   {'part': BallDrain(), 'position': [303,53.5] }, # ball drain
   {'part': BallHole(), 'position': [340.2,1116.3] }, # hidden entrance
