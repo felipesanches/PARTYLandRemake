@@ -4,7 +4,9 @@
 # But I'm refactoring it and re-modelling it here using the SolidPinball framework
 # See https://github.com/felipesanches/SolidPinball/ for more info.
 
-from solid.utils import *
+from math import cos, sin
+
+from solid import scad_render_to_file
 from pinball.playfield import Playfield
 from pinball.parts.launcher import Launcher
 from pinball.parts.rollover import Rollover
